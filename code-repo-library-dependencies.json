@@ -1,0 +1,28 @@
+{
+  "$id": "data://.../code-repo-library-dependencies",
+  "title": "RepoLibraryDependencies",
+  "description": "The library dependencies this library has, e.g. Spring and anything transitive. Note this is not an SBOM in the traditional sense generated at build time.",
+  "type": "object",
+  "properties": {
+    "csiId": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "libraryName": {
+      "type": "string"
+    },
+    "libraryVersion": {
+      "type": "string"
+    },
+    "transitive": {
+      "type": "bool",
+      "description": "Is this a transitive library"
+    },
+    "source": {
+      "type": "string",
+      "description": "Where did this libary come from, e.g. pom.xml"
+    }
+  }
+}

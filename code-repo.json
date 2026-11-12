@@ -1,8 +1,8 @@
 {
-  "$id": "data://.../repository",
-  "title": "LibraryDependencies",
+  "$id": "data://.../code-repo",
+  "title": "CodeRepo",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "An address similar to http://microformats.org/wiki/h-card",
+  "description": "A code repository",
   "type": "object",
   "properties": {
     "csiId": {
@@ -17,46 +17,81 @@
       "type": "string",
       "description": "The URL to the repository"
     },
-    "buildTool": {
+    "defaultBranch": {
       "type": "string",
-      "description": "The build tool used for this repo, e.g. Maven, Gradle, etc."
+      "description": "The URL to the repository"
     },
     "repoType": {
       "type": "string",
       "description": "The type of repo, e.g. library, service, documentation, configuration"
     },
-    "primaryLanguage": {
-      "type": "string",
-      "description": "The repos primary lanugage, e.g. Java, Python, Markdown"
+    "techStack": {
+      "type": "object",
+      "properties": {
+        "primaryLanguage": {
+          "type": "string",
+          "description": "The repos primary lanugage, e.g. Java, Python, Markdown"
+        },
+        "primaryFramework": {
+          "type": "string",
+          "description": "The repos primary framework, e.g. Spring"
+        },
+        "primaryFrameworkVersion": {
+          "type": "string",
+          "description": "The repos primary framework, e.g. Spring"
+        },
+        "stack": {
+          "description": "A list of the technologies found, e.e. Java, Maven, SQL, Kafka etc.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "technologyName": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "buildTool": {
+          "type": "string",
+          "description": "The build tool used for this repo, e.g. Maven, Gradle, etc."
+        }
+      },
+      "scanData": {
+        "type": "object",
+        "properties": {
+          "lastScanDateTime": {
+            "type": "string"
+          },
+          "scannedCommit": {
+            "type": "string"
+          },
+          "lastJobStatus": {
+            "type": "string",
+            "enum": [
+              "COMPLETED",
+              "FAILED"
+            ]            
+          }
+        }
+      },
+      "capabilities": {
+        "type": "object",
+        "properties": {
+          "tests": {
+            "type": "bool"
+          },
+          "dockerfile": {
+            "type": "bool"
+          },
+          "cicd": {
+            "type": "bool"
+          },
+          "k8rs": {
+            "type": "bool"
+          }                    
+        }
+      }
     }
-  }
-}
-
-
-{
-  "$id": "data://.../repo-library-dependencies",
-  "title": "LibraryDependencies",
-  "description": "The library dependencies, sometimes called an SBOM",
-  "type": "object",
-  "properties": {
-    "csiId": {
-      "type": "string"
-    },
-    "repo": {
-      "type": "string"
-    },
-    "libraryName": {
-      "type": "string"
-    },
-    "libraryVersion": {
-      "type": "string"
-    },
-    "transitive": {
-      "type": "bool""description": "Is this a transitive library"
-    },
-    "source": {
-      "type": "string",
-      "description": "Where did this libary come from, e.g. pom.xml"
-    },
   }
 }

@@ -1,0 +1,30 @@
+{
+  "$id": "data://.../csi",
+  "title": "CSI",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A code repository",
+  "type": "object",
+  "properties": {
+    "csiId": {
+      "type": "string",
+      "description": "The CSI this repo belongs to"
+    },
+    "csiName": {
+      "type": "string",
+      "description": "The name of the CSI"
+    },
+    "languages": {
+      "type": "array",
+      "description": "The list of languages found in repositories for this CSI",
+      "items": {
+        "type": "object",
+        "properties": {
+            "lanugageName": {
+                "type": "string",
+                "description": "The name of the language"
+            }
+        }
+      }
+    }
+  }
+}
