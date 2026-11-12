@@ -4,7 +4,7 @@
   "description": "The library dependencies this library has, e.g. Spring and anything transitive. Note this is not an SBOM in the traditional sense generated at build time.",
   "type": "object",
   "properties": {
-    "csiId": {
+    "applicationId": {
       "type": "string"
     },
     "repo": {

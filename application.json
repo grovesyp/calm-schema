@@ -1,15 +1,15 @@
 {
-  "$id": "data://.../csi",
-  "title": "CSI",
+  "$id": "data://.../application",
+  "title": "application",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "A code repository",
+  "description": "An application, made up of one more more repositories",
   "type": "object",
   "properties": {
-    "csiId": {
+    "applicationId": {
       "type": "string",
       "description": "The CSI this repo belongs to"
     },
-    "csiName": {
+    "applicationName": {
       "type": "string",
       "description": "The name of the CSI"
     },

@@ -5,7 +5,7 @@
   "description": "From a code scan, lists the API endpoints discovered",
   "type": "object",
   "properties": {
-    "csiId": {
+    "applicationId": {
       "type": "string",
       "description": "The CSI this repo belongs to"
     },

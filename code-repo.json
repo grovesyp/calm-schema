@@ -5,9 +5,9 @@
   "description": "A code repository",
   "type": "object",
   "properties": {
-    "csiId": {
+    "applicationId": {
       "type": "string",
-      "description": "The CSI this repo belongs to"
+      "description": "The application this repo belongs to"
     },
     "repoName": {
       "type": "string",
