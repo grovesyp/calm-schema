@@ -1,0 +1,25 @@
+{
+  "$id": "data://.../code-repo",
+  "title": "CodeRepo",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A code repository",
+  "type": "object",
+  "properties": {
+    "componentIdFrom": {
+      "type": "string"
+    },
+    "componentIdTo": {
+      "type": "string"
+    },
+    "endpointId": {
+      "type": "string"
+    },    
+    "connectionType": {
+      "type": "string"
+    },
+    "connectionProtocol": {
+      "type": "string"
+    }
+       
+  }
+}

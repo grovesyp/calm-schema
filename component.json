@@ -1,0 +1,42 @@
+{
+  "$id": "data://.../code-repo",
+  "title": "CodeRepo",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A code repository",
+  "type": "object",
+  "properties": {
+    "componentId": {
+      "type": "string"
+    },
+    "applicationId": {
+      "type": "string",
+      "description": "The application this repo belongs to"
+    },
+    "componentName": {
+      "type": "string",
+      "description": "The URL to the repository"
+    },
+    "componentType": {
+      "type": "string",
+      "description": "The URL to the repository"
+    },
+
+    "techStack": {
+      "type": "object",
+      "properties": {
+        "primaryLanguage": {
+          "type": "string",
+          "description": "The repos primary lanugage, e.g. Java, Python, Markdown"
+        },
+        "primaryFramework": {
+          "type": "string",
+          "description": "The repos primary framework, e.g. Spring"
+        },
+        "primaryFrameworkVersion": {
+          "type": "string",
+          "description": "The repos primary framework, e.g. Spring"
+        }            
+      }          
+    }
+  }
+}

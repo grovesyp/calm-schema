@@ -1,18 +1,16 @@
 {
-  "$id": "data://.../code-repo-api-endpoints",
+  "$id": "data://.../component-api-endpoint",
   "title": "CodeRepoApiEndpoints",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "From a code scan, lists the API endpoints discovered",
+  "description": "From a code scan, lists the API endpoints discovered in a component",
   "type": "object",
   "properties": {
-    "applicationId": {
-      "type": "string",
-      "description": "The CSI this repo belongs to"
+    "endpointId": {
+      "type": "string"
     },
-    "repoName": {
-      "type": "string",
-      "description": "The name of the repository"
-    },
+    "componentId": {
+      "type": "string"
+    },  
     "endpointURI": {
       "type": "string",
       "description": "The URI of the endpoint, e.g.  api/v1/customer"
