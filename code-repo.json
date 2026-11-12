@@ -1,0 +1,62 @@
+{
+  "$id": "data://.../repository",
+  "title": "LibraryDependencies",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An address similar to http://microformats.org/wiki/h-card",
+  "type": "object",
+  "properties": {
+    "csiId": {
+      "type": "string",
+      "description": "The CSI this repo belongs to"
+    },
+    "repoName": {
+      "type": "string",
+      "description": "The name of the repository"
+    },
+    "repoUrl": {
+      "type": "string",
+      "description": "The URL to the repository"
+    },
+    "buildTool": {
+      "type": "string",
+      "description": "The build tool used for this repo, e.g. Maven, Gradle, etc."
+    },
+    "repoType": {
+      "type": "string",
+      "description": "The type of repo, e.g. library, service, documentation, configuration"
+    },
+    "primaryLanguage": {
+      "type": "string",
+      "description": "The repos primary lanugage, e.g. Java, Python, Markdown"
+    }
+  }
+}
+
+
+{
+  "$id": "data://.../repo-library-dependencies",
+  "title": "LibraryDependencies",
+  "description": "The library dependencies, sometimes called an SBOM",
+  "type": "object",
+  "properties": {
+    "csiId": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "libraryName": {
+      "type": "string"
+    },
+    "libraryVersion": {
+      "type": "string"
+    },
+    "transitive": {
+      "type": "bool""description": "Is this a transitive library"
+    },
+    "source": {
+      "type": "string",
+      "description": "Where did this libary come from, e.g. pom.xml"
+    },
+  }
+}
